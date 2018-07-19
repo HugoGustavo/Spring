@@ -1,15 +1,19 @@
 package com.tutorialspoint;
 
-import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
-	private static AbstractApplicationContext context;
-
+	private static ApplicationContext applicationContext;
+	//private static AbstractApplicationContext abstractApplicationContext;
+	//private static AnnotationConfigApplicationContext annotationConfigApplicationContext;
+	//private static ConfigurableApplicationContext configurableApplicationContext;
+	
 	public static void main(String[] args) {
-		context = new ClassPathXmlApplicationContext("Beans.xml");
-		HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
-		obj.getMessage();
-		context.registerShutdownHook();
+		applicationContext = new ClassPathXmlApplicationContext("Beans.xml");
+		Student student = (Student) applicationContext.getBean("student");
+		student.getName();
+		student.getAge();
+		student.printThrowException();
 	}
 }

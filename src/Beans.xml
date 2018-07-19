@@ -2,13 +2,95 @@
 
 <beans xmlns = "http://www.springframework.org/schema/beans"
    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
-   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd"
    default-init-method="init"
    default-destroy-method="destroy">
+   <!--  <aop:aspectj-autoproxy/> -->
+   <context:annotation-config/>
 
    <bean id = "helloWorld" class = "com.tutorialspoint.HelloWorld" init-method="init" destroy-method="destroy">
-      <property name = "message" value = "Hello World"/>
+      <property name = "message1" value="Hello World"/>
+      <property name = "message2" value="Hello World!"/>
+      <property name = "message3" value="Hello Second World!"/>
    </bean>
+   
+   <bean id = "cStartEventHandler" class = "com.tutorialspoint.CStartEventHandler"/>
+   <bean id = "cStopEventHandler" class = "com.tutorialspoint.CStopEventHandler"/>
+    <bean id = "customEventPublisher" class = "com.tutorialspoint.CustomEventPublisher"/>
+   
+   <bean class="com.tutorialspoint.InitHelloWorld"/>
+   
+    <bean id="beanTemplate" abstract="true">
+	   <property name="message1" value="Hello World"/>
+	   <property name="message2" value="Hello India!"/>
+	   <property name="message3" value="Namaste India!"/>
+   </bean>
+   
+   <bean id= "helloIndia" class="com.tutorialspoint.HelloIndia" parent = "beanTemplate">
+    <!-- 	<property name="message1" value="Hello World"/>
+	   	<property name="message2" value="Hello India!"/>
+	   	<property name="message3" value="Namaste India!"/>  -->
+   </bean>
+   
+   <bean id="textEditor" class="com.tutorialspoint.TextEditor"></bean>
+   
+   <bean id="spellChecker" class="com.tutorialspoint.SpellChecker"></bean>
+   
+   <bean id="javaCollection" class="com.tutorialspoint.JavaCollection">
+   	<property name="addressList">
+   		<list>
+   			<value>INDIA</value>
+   			<value>Pakistan</value>
+   			<value>USA</value>
+   			<value>USA</value>
+   		</list>
+   	</property>
+   	<property name="addressSet">
+   		<set>
+   			<value>INDIA</value>
+   			<value>Pakistan</value>
+   			<value>USA</value>
+   			<value>USA</value>
+   		</set>
+   	</property>
+   	<property name="addressMap">
+   		<map>
+   			<entry key="1" value="INDIA"/>
+   			<entry key="2" value="Pakistan"/>
+   			<entry key="3" value="USA"/>
+   			<entry key="4" value="USA"/>
+   		</map>
+   	</property>
+   	<property name="addressProp">
+   		<props>
+   			<prop key="one">INDIA</prop>
+   			<prop key="two">INDIA</prop>
+   			<prop key="three">Pakistan</prop>
+   			<prop key="four">USA</prop>
+   		</props>
+   	</property>
+   </bean>
+   <bean id="student" class="com.tutorialspoint.Student">
+   	<property name="name" value="Zara"/>
+   	<property name="age" value="11"/>
+   </bean>
+   
+   <bean id = "profile" class = "com.tutorialspoint.Profile"></bean>
+   
+   <bean id="student1" class="com.tutorialspoint.Student">
+	   <property name="name" value="Zara"/>
+	   <property name="age" value="11"/>
+   </bean>
+   <bean id="student2" class="com.tutorialspoint.Student">
+	   <property name="name" value="Nuha"/>
+	   <property name="age" value="2"/>
+   </bean>
+   
+   <bean id="logging" class="com.tutorialspoint.Logging"/>
+  
 
 </beans>

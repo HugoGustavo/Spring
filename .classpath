@@ -24,5 +24,9 @@
 	<classpathentry kind="lib" path="C:/Users/hugog/Documents/libs/spring-framework-5.0.7.RELEASE/libs/spring-webflux-5.0.7.RELEASE.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hugog/Documents/libs/spring-framework-5.0.7.RELEASE/libs/spring-webmvc-5.0.7.RELEASE.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hugog/Documents/libs/spring-framework-5.0.7.RELEASE/libs/spring-websocket-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hugog/Documents/libs/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hugog/Documents/libs/aspectj.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hugog/Documents/libs/aspectjrt-1.6.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hugog/Documents/libs/aspectjweaver-1.6.8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
