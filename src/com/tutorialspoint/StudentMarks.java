@@ -1,10 +1,37 @@
 package com.tutorialspoint;
 
-public class Student {
+public class StudentMarks {
 	private Integer age;
 	private String name;
 	private Integer id;
+	private Integer marks;
+	private Integer year;
+	private Integer sid;
 	
+	public Integer getMarks() {
+		return marks;
+	}
+
+	public void setMarks(Integer marks) {
+		this.marks = marks;
+	}
+
+	public Integer getYear() {
+		return year;
+	}
+
+	public void setYear(Integer year) {
+		this.year = year;
+	}
+
+	public Integer getSid() {
+		return sid;
+	}
+
+	public void setSid(Integer sid) {
+		this.sid = sid;
+	}
+
 	public Integer getId() {
 		return id;
 	}

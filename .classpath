@@ -28,5 +28,6 @@
 	<classpathentry kind="lib" path="C:/Users/hugog/Documents/libs/aspectj.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hugog/Documents/libs/aspectjrt-1.6.8.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hugog/Documents/libs/aspectjweaver-1.6.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hugog/Documents/libs/postgresql-42.2.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
